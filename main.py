@@ -8,6 +8,8 @@ from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 import logging
 import os
+import os
+
 
 # Configure logging
 logging.basicConfig(
@@ -106,4 +108,5 @@ async def serve_static(file_path: str):
 if __name__ == "__main__":
     import uvicorn
     logger.info("Starting StackLyft Landing Server...")
-    uvicorn.run(app, host="0.0.0.0", port=8000, log_level="info")
+    port = int(os.environ.get("PORT", 8000))
+    uvicorn.run(app, host="0.0.0.0", port=port, log_level="info")
