@@ -1,0 +1,104 @@
+/* Custom styles to complement Tailwind */
+/* Smooth transitions for all interactive elements */
+* {
+    transition: all 0.2s ease;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* Loading spinner */
+.spinner {
+    border: 3px solid #f3f3f3;
+    border-top: 3px solid #3b82f6;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Table hover effects */
+.hover-row:hover {
+    background-color: #f9fafb;
+    cursor: pointer;
+}
+
+/* Status badge colors */
+.status-quoted { background-color: #ddd6fe; color: #7c3aed; }
+.status-scheduled { background-color: #fed7aa; color: #ea580c; }
+.status-in-progress { background-color: #bfdbfe; color: #2563eb; }
+.status-completed { background-color: #bbf7d0; color: #16a34a; }
+.status-cancelled { background-color: #fecaca; color: #dc2626; }
+.status-pending { background-color: #fef3c7; color: #d97706; }
+.status-sent { background-color: #ddd6fe; color: #7c3aed; }
+.status-paid { background-color: #bbf7d0; color: #16a34a; }
+.status-overdue { background-color: #fecaca; color: #dc2626; }
+
+/* Card animations */
+.card-hover {
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card-hover:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+/* Modal backdrop */
+.modal-backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+}
+
+/* Form focus states */
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    ring: 2px;
+    ring-color: #3b82f6;
+    border-color: #3b82f6;
+}
+
+/* Button states */
+.btn-primary {
+    background-color: #3b82f6;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 0.375rem;
+    font-weight: 500;
+}
+
+.btn-primary:hover {
+    background-color: #2563eb;
+}
+
+.btn-primary:active {
+    background-color: #1d4ed8;
+}
+
+/* Navigation active state */
+.nav-active {
+    background-color: #eff6ff;
+    border-right: 4px solid #3b82f6;
+    font-weight: 600;
+}
